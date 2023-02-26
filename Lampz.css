@@ -71,6 +71,7 @@ button span{
 }
 .lamp{
     width: 100%;
+    filter: invert(100%);
 }
 .light{
     position: absolute;

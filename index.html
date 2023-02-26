@@ -69,8 +69,19 @@
 					light.classList.toggle('on')
 				}, 400)
 			}
+
+			
+
 			btn.addEventListener('click', () => {
 				new Audio('audio.mp3').play()
+				setTimeout(()=>{
+					if (btn.classList.contains('active')== true){
+				document.getElementsByClassName('lamp')[0].style.filter='invert(0%)'
+			}
+			else{
+				document.getElementsByClassName('lamp')[0].style.filter='invert(100%)'
+			}
+				},400)
 			})
 		</script>
 	</body>
