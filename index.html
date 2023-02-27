@@ -14,48 +14,50 @@
 			href="Lampz.css" />
 	</head>
 	<body>
-		<div class="header">
-			<nav>
-				<img
-					class="menu"
-					src="./Images/menu.png" />
-				<img
-					class="logo"
-					src="./Images/logo.png" />
-				<ul>
-					<li><a href="">Home</a></li>
-					l̥
-					<li><a href="">Latest</a></li>
-					<li><a href="">Affordable</a></li>
-					<li><a href="">Luxurious</a></li>
-				</ul>
-				<button
-					type="button"
-					onclick="toggleBtn()"
-					id="btn">
-					<span></span>
-				</button>
-			</nav>
-			<div class="lamp-container">
-				<img
-					src="./Images/lamp.png"
-					class="lamp" />
-				<img
-					src="./Images/light.png"
-					class="light"
-					id="light" />
-			</div>
-			<div class="text-container">
-				<h1>
-					Latest <br />
-					in lighting
-				</h1>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, earum
-					qui doloribus sed veniam dolores! Repudiandae quisquam inventore
-					officia ipsa numquam, molestiae fuga.
-				</p>
-				<a href="">Want different sizes?</a>
+		<div class="color">
+			<div class="header">
+				<nav>
+					<img
+						class="menu"
+						src="./Images/menu.png" />
+					<img
+						class="logo"
+						src="./Images/logo.png" />
+					<ul>
+						<li><a href="">Home</a></li>
+						l̥
+						<li><a href="">Latest</a></li>
+						<li><a href="">Affordable</a></li>
+						<li><a href="">Luxurious</a></li>
+					</ul>
+					<button
+						type="button"
+						onclick="toggleBtn()"
+						id="btn">
+						<span></span>
+					</button>
+				</nav>
+				<div class="lamp-container">
+					<img
+						src="./Images/lamp.png"
+						class="lamp" />
+					<img
+						src="./Images/light.png"
+						class="light"
+						id="light" />
+				</div>
+				<div class="text-container">
+					<h1>
+						Latest <br />
+						in lighting
+					</h1>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, earum
+						qui doloribus sed veniam dolores! Repudiandae quisquam inventore
+						officia ipsa numquam, molestiae fuga.
+					</p>
+					<a href="">Want different sizes?</a>
+				</div>
 			</div>
 		</div>
 		<script>
@@ -69,8 +71,23 @@
 					light.classList.toggle('on')
 				}, 400)
 			}
+
+			
+
 			btn.addEventListener('click', () => {
 				new Audio('audio.mp3').play()
+				setTimeout(()=>{
+					if (btn.classList.contains('active')== true){
+				document.getElementsByClassName('lamp')[0].style.filter='invert(0%)'
+				document.getElementsByClassName('header')[0].style.background = 'black'
+				document.getElementsByClassName('header')[0].style.color='white'
+			}
+			else{
+				document.getElementsByClassName('lamp')[0].style.filter='invert(100%)'
+				document.getElementsByClassName('header')[0].style.background = '#8c8cee'
+				document.getElementsByClassName('header')[0].style.color='black'
+						}
+				},400)
 			})
 		</script>
 	</body>
