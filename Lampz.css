@@ -4,12 +4,12 @@
     /* box-sizing: border-box; */
 }
 
-
 .header{
-    background-color: #1d2026;
+    background-color: black;
     width: 100%;
     min-height: 100vh;
     color:#fff;
+    transition: all 2s ease-in-out;
     /* position: relative; */
 }
 nav{
